@@ -1,0 +1,74 @@
+
+// Perfect for small amount of widggt
+body: SizedBox(
+height: 220,
+child: ListView(
+  scrollDirection: Axis.horizontal,
+  children: [
+	//const CircleAvatar(radius: 100,),
+	buildCarte(),
+	const SizedBox(width: 8),
+	buildCarte(),
+	const SizedBox(width: 8),
+	buildCarte(),
+	const SizedBox(width: 8),
+	buildCarte(),
+  ],
+),
+),
+
+//////////////////////////////////////////////////////////////////////
+body: SizedBox(
+height: 200,
+child: SingleChildScrollView(
+  scrollDirection: Axis.horizontal,
+  child: Row(
+	children: [
+	  //const CircleAvatar(radius: 100,),
+	  buildCarte(),
+	  const SizedBox(width: 8),
+	  buildCarte(),
+	  const SizedBox(width: 8),
+	  buildCarte(),
+	  const SizedBox(width: 8),
+	],
+  ),
+),
+),
+
+/////////////////////////////////////////////////////////////////
+body: SingleChildScrollView(
+scrollDirection: Axis.horizontal,
+child: Row(
+  children: [
+	//const CircleAvatar(radius: 100,),
+	buildCarte(),
+	const SizedBox(width: 8),
+	buildCarte(),
+	const SizedBox(width: 8),
+	buildCarte(),
+	const SizedBox(width: 8),
+	buildCarte(),
+  ],
+),
+),
+
+/////////////////////////////////////////////////////////////////////////
+body: SizedBox(
+   height: 220,
+   child: ListView.builder(
+   scrollDirection: Axis.horizontal,
+   itemCount: 6,
+   itemBuilder: (context,index) =>buildCarte(),
+   ),
+  ),
+/////////////////////////////////////////////////////////
+body: SizedBox(
+	height: 220,
+	child: ListView.separated(
+	  scrollDirection: Axis.horizontal,
+	  itemCount: 6,
+	  separatorBuilder: (context, _) => const SizedBox(width: 8),
+	  itemBuilder: (context, index) => buildCarte(),
+	),
+  ),
